@@ -1,0 +1,29 @@
+.app-wrapper {
+    .activity-loader {
+        position: fixed;
+        background-color: rgb(50 36 36 / 15%);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        place-items: center;
+        z-index: 1000;
+
+        >div {
+            background-color: #fff;
+            border-radius: 3px;
+            padding: 2rem;
+            text-align: center;
+
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                letter-spacing: 0.64px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+

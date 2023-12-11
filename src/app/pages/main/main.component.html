@@ -1,0 +1,9 @@
+<div class="main">
+  <app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+  <div
+    class="transition-container"
+    [ngStyle]="{ 'padding-left': isSideNavCollapsed ? '6rem' : '18rem' }"
+  >
+    <router-outlet></router-outlet>
+  </div>
+</div>

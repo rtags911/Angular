@@ -1,0 +1,47 @@
+<h1>{{ title | uppercase }}</h1>
+
+<div class="card">
+  <div class="card-head">Pipes</div>
+  <div class="card-body">
+    <h1>Date Pipe</h1>
+    <p>Today's Date: {{ Date | date : "full" }}</p>
+    <h1>UpperCase Pipe</h1>
+    <p>Original Text: {{ originalText }}</p>
+    <p>Text in Uppercase: {{ originalText | uppercase }}</p>
+
+    <h1>PercentPipe</h1>
+    <p>Original Decimal Value: {{ decimalValue }}</p>
+    <p>Formatted Percentage: {{ decimalValue | percent }}</p>
+    <p>
+      Formatted Percentage (2 digits): {{ decimalValue | percent : "2.2-2" }}
+    </p>
+    <p>
+      Formatted Percentage (Custom Locale):
+      {{ decimalValue | percent : "2.2-2" : "fr-FR" }}
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <h1>Data Services</h1>
+  <div class="card-body">
+    <li *ngFor="let number of numbers; let i = index">
+      {{ number }}
+      <button (click)="incrementNumber(i)">Increment</button>
+    </li>
+  </div>
+</div>
+
+<div class="card">
+  <h1>Highlight Directive</h1>
+  <p appHighlight>Hover to highlight this paragraph!</p>
+</div>
+
+<div class="card">
+  <h1>Product Directive and Template</h1>
+
+  <app-product-list></app-product-list>
+
+  <p [appCurrencyFormat]="1200"></p>
+  <app-product-add></app-product-add>
+</div>

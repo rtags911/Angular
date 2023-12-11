@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body">
+    <h1>{{ title | uppercase }}</h1>
+    <div>
+      <button
+        class="btn btn-danger"
+        (click)="logout()"
+        [@buttonAnimation]="buttonState"
+        (mouseenter)="onHover()"
+        (mouseleave)="onLeave()"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</div>
